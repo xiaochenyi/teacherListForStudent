@@ -1,0 +1,120 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+:focus {
+    outline: 0;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+a{
+    color: inherit;
+}
+a img, iframe {
+    border: none;
+}
+ol, ul {
+    list-style: none;
+}
+input, textarea, select, button {
+    font-size: 100%;
+    font-family: inherit;
+}
+select {
+    margin: inherit;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+a{text-decoration: none;}
+.fl{float: left}
+.fr{float: right}
+.red{color: #EB4346}
+input{
+    -webkit-transform: translateZ(0);
+
+    -moz-transform: translateZ(0);
+
+    -ms-transform: translateZ(0);
+
+    -o-transform: translateZ(0);
+
+    transform: translateZ(0);/*解决加入js后input框输入瞬间变白的现象*/
+}
+
+
+/*------------------ 提示条 -------------------*/
+.toast{z-index:4;position:fixed;top:30%;width:100%;text-align:center;opacity:0.9;font-size:0.8rem;}
+.toast span{padding:0.4rem 1.1rem;color:#fff;background:rgb(0,0,0);border-radius:5px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,1)}
+.common-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11000;
+    width: auto;
+    padding: 0 8px;
+    line-height: 34px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.common-toast-show {
+    animation: commonToastShow ease 300ms;
+}
+
+.common-toast-hide {
+    animation: commonToastHide ease 500ms;
+}
+
+@keyframes commonToastShow {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes commonToastHide {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+}
